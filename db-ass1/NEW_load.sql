@@ -43,6 +43,7 @@ INSERT INTO Copies(SIGNATURE,ISBN)
 SELECT DISTINCT trim(SIGNATURE),trim(ISBN)
 FROM fsdb.acervus where signature is not null
 ;
+update copies set condition=substr('NGWVD', dbms_random.value(1,6),1); 
 -- 241572 rows
 commit;
 
