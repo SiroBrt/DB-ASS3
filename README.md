@@ -2,3 +2,5 @@
 idk man
 like
 idk
+
+q le jodan al cajjelon, puta mierda de asignacion
