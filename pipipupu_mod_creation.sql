@@ -5,17 +5,16 @@
 
 -- REFERENCE
 -- -------------------------------------------
+-- select table_name, avg_row_len, num_rows, blocks from user_tables;
 -- CREATE TABLE (logical design ) physical design;
 -- CREATE TABLE ( … ) PCTFREE 10 PCTUSED 60 STORAGE(INITIAL 5);
 -- CREATE TABLE ( … ) TABLESPACE your_tablespace;
-
 
 -- TABLESPACES
 -- -------------------------------------------
 -- TAB_2K
 -- TAB_8K
 -- TAB_16K 
-
 
 -- DESTROY ALL TABLES
 -- ------------------
