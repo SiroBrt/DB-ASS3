@@ -41,49 +41,49 @@ PROCEDURE PR_WORKLOAD(N NUMBER) IS
 BEGIN
 
 -- STEP 1 - QUERY 1
-FOR fila in (
-select * from editions where pub_place='Madrid'
-) LOOP null; END LOOP;
+-- FOR fila in (
+-- select * from editions where pub_place='Madrid'
+-- ) LOOP null; END LOOP;
 
--- STEP 2 - QUERY 2
-FOR fila in (
-select * from editions where publisher='B'
-) LOOP null; END LOOP;
+-- -- STEP 2 - QUERY 2
+-- FOR fila in (
+-- select * from editions where publisher='B'
+-- ) LOOP null; END LOOP;
 
--- STEP 3 - QUERY 3
-FOR fila in (
-select * from copies where condition='G'
-) LOOP null; END LOOP;
+-- -- STEP 3 - QUERY 3
+-- FOR fila in (
+-- select * from copies where condition='G'
+-- ) LOOP null; END LOOP;
 
--- STEP 4 - QUERY 1
-FOR fila in (
-select * from editions where pub_place='Segovia'
-) LOOP null; END LOOP;
+-- -- STEP 4 - QUERY 1
+-- FOR fila in (
+-- select * from editions where pub_place='Segovia'
+-- ) LOOP null; END LOOP;
 
--- STEP 5 - QUERY 2
-FOR fila in (
-select * from editions where publisher='SM'
-) LOOP null; END LOOP;
+-- -- STEP 5 - QUERY 2
+-- FOR fila in (
+-- select * from editions where publisher='SM'
+-- ) LOOP null; END LOOP;
 
--- STEP 6 - QUERY 3
-FOR fila in (
-select * from copies where condition='N'
-) LOOP null; END LOOP;
+-- -- STEP 6 - QUERY 3
+-- FOR fila in (
+-- select * from copies where condition='N'
+-- ) LOOP null; END LOOP;
 
--- STEP 7 - QUERY 1
-FOR fila in (
-select * from editions where pub_place='Barataria'
-) LOOP null; END LOOP;
+-- -- STEP 7 - QUERY 1
+-- FOR fila in (
+-- select * from editions where pub_place='Barataria'
+-- ) LOOP null; END LOOP;
 
--- STEP 8 - QUERY 2
-FOR fila in (
-select * from editions where publisher='C'
-) LOOP null; END LOOP;
+-- -- STEP 8 - QUERY 2
+-- FOR fila in (
+-- select * from editions where publisher='C'
+-- ) LOOP null; END LOOP;
 
--- STEP 9 - QUERY 3
-FOR fila in (
-select * from copies where condition='D'
-) LOOP null; END LOOP;
+-- -- STEP 9 - QUERY 3
+-- FOR fila in (
+-- select * from copies where condition='D'
+-- ) LOOP null; END LOOP;
 
 -- STEP 10 - QUERY 4
 FOR fila in (
