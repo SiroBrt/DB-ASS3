@@ -18,7 +18,6 @@ DROP TABLE routes;
 DROP TABLE municipalities;
 DROP TABLE copies;
 DROP TABLE editions;
-DROP CLUSTER places;
 DROP TABLE more_authors;
 DROP TABLE books;
 
@@ -51,8 +50,6 @@ CONSTRAINT fk_more_authors_books FOREIGN KEY(title,main_author) REFERENCES books
 
 --
 
-create cluster places(PUB_PLACE varchar2(50));
-create cluster pub(PUBLISHER varchar2(100));
 CREATE TABLE Editions(
 ISBN               VARCHAR2(20),
 TITLE              VARCHAR2(200) NOT NULL,
@@ -74,9 +71,7 @@ URL                VARCHAR2(200),
 CONSTRAINT pk_editions PRIMARY KEY(isbn),
 CONSTRAINT uk_editions UNIQUE (national_lib_id),
 CONSTRAINT fk_editions_books FOREIGN KEY(title,author) REFERENCES books(title,author)
-)cluster places(pub_place);
-create index idx_places on cluster places;
-create index idx_publiher on cluster pub;
+);
 
 --
 
@@ -90,6 +85,7 @@ CONSTRAINT pk_copies PRIMARY KEY(signature),
 CONSTRAINT fk_copies_editions FOREIGN KEY(isbn) REFERENCES editions(isbn),
 CONSTRAINT ck_condition CHECK (condition in ('N', 'G', 'W', 'V', 'D') )
 );
+create index idx_cond on Copies(CONDITION);
 
 --
 
@@ -240,3 +236,4 @@ CONSTRAINT fk_posts_loans FOREIGN KEY(signature,user_id,stopdate)
            REFERENCES loans (signature,user_id,stopdate) ON DELETE CASCADE,
 CONSTRAINT ck_posts_dates CHECK (stopdate<post_date)
 );
+
