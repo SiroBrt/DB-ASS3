@@ -73,7 +73,7 @@ URL                VARCHAR2(200),
 CONSTRAINT pk_editions PRIMARY KEY(isbn),
 CONSTRAINT uk_editions UNIQUE (national_lib_id),
 CONSTRAINT fk_editions_books FOREIGN KEY(title,author) REFERENCES books(title,author)
-)cluster places(pub_place);
+)cluster pub(publisher);
 create index idx_publisher on cluster pub;
 
 --
